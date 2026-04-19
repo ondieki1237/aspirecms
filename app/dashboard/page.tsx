@@ -69,7 +69,7 @@ export default function DashboardPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 shadow-sm">
+      <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold text-black">CMS Dashboard</h1>
@@ -88,24 +88,24 @@ export default function DashboardPage() {
       <main className="max-w-7xl mx-auto px-6 py-8">
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-white rounded-lg shadow p-6 border-l-4 border-red-600">
+          <div className="bg-white rounded-lg border border-gray-200 p-6">
             <h3 className="text-gray-600 text-sm font-medium">Total Clients</h3>
-            <p className="text-3xl font-bold text-black mt-2">{clients.length}</p>
+            <p className="text-3xl font-semibold text-gray-900 mt-2">{clients.length}</p>
           </div>
-          <div className="bg-white rounded-lg shadow p-6 border-l-4 border-blue-600">
+          <div className="bg-white rounded-lg border border-gray-200 p-6">
             <h3 className="text-gray-600 text-sm font-medium">Active Clients</h3>
-            <p className="text-3xl font-bold text-black mt-2">
+            <p className="text-3xl font-semibold text-gray-900 mt-2">
               {clients.filter((c) => c.status === 'Active').length}
             </p>
           </div>
-          <div className="bg-white rounded-lg shadow p-6 border-l-4 border-black">
+          <div className="bg-white rounded-lg border border-gray-200 p-6">
             <h3 className="text-gray-600 text-sm font-medium">Pending Tasks</h3>
-            <p className="text-3xl font-bold text-black mt-2">0</p>
+            <p className="text-3xl font-semibold text-gray-900 mt-2">0</p>
           </div>
         </div>
 
         {/* Clients Section */}
-        <div className="bg-white rounded-lg shadow">
+        <div className="bg-white rounded-lg border border-gray-200">
           <div className="p-6 border-b border-gray-200 flex items-center justify-between">
             <h2 className="text-xl font-bold text-black">Your Clients</h2>
             <Link href="/dashboard/clients/add">

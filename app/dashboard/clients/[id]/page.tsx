@@ -78,7 +78,7 @@ export default function ClientDetailPage() {
   if (!client) {
     return (
       <div className="min-h-screen bg-gray-50">
-        <header className="bg-white border-b border-gray-200 shadow-sm">
+        <header className="bg-white border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-6 py-4">
             <Link href="/dashboard">
               <button className="text-red-600 hover:text-red-700 font-medium">← Back to Dashboard</button>
@@ -95,7 +95,7 @@ export default function ClientDetailPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 shadow-sm">
+      <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <Link href="/dashboard">
             <button className="text-red-600 hover:text-red-700 font-medium mb-4">← Back to Dashboard</button>
@@ -127,7 +127,7 @@ export default function ClientDetailPage() {
         )}
 
         {/* Tabs */}
-        <div className="bg-white rounded-lg shadow mb-6">
+        <div className="bg-white rounded-lg border border-gray-200 mb-6">
           <div className="flex border-b border-gray-200">
             <button
               onClick={() => setActiveTab('overview')}

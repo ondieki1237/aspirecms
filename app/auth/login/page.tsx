@@ -31,18 +31,18 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         {/* Header */}
         <div className="mb-8 text-center">
-          <h1 className="text-4xl font-bold text-white mb-2">CMS</h1>
-          <p className="text-gray-400">Counselor Management System</p>
+          <h1 className="text-3xl font-semibold text-gray-900 mb-2">CMS</h1>
+          <p className="text-gray-500">Counselor Management System</p>
         </div>
 
         {/* Login Card */}
         <form
           onSubmit={handleSubmit}
-          className="bg-white rounded-lg shadow-lg p-8 space-y-6"
+          className="bg-white border border-gray-200 rounded-xl shadow-sm p-8 space-y-6"
         >
           <h2 className="text-2xl font-bold text-black">Welcome Back</h2>
 
@@ -83,7 +83,7 @@ export default function LoginPage() {
           <Button
             type="submit"
             disabled={loading}
-            className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-2 rounded-lg transition"
+            className="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-2 rounded-lg transition"
           >
             {loading ? 'Signing in...' : 'Sign In'}
           </Button>
@@ -103,7 +103,7 @@ export default function LoginPage() {
         </form>
 
         {/* Footer */}
-        <p className="text-center text-gray-400 text-sm mt-8">
+        <p className="text-center text-gray-500 text-sm mt-8">
           Professional counselor management system
         </p>
       </div>

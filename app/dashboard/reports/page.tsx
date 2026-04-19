@@ -78,21 +78,21 @@ export default function ReportsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-black text-white sticky top-0 z-50 border-b border-primary">
+      <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/dashboard" className="text-2xl font-bold hover:text-primary">
+          <Link href="/dashboard" className="text-2xl font-semibold text-gray-900">
             Counselor System
           </Link>
           <div className="flex gap-4">
-            <span className="text-gray-300">{user?.name}</span>
+            <span className="text-gray-600">{user?.name}</span>
             <button
               onClick={() => {
                 fetch('/api/auth/logout', { method: 'POST', credentials: 'include' })
                 router.push('/auth/login')
               }}
-              className="px-4 py-2 bg-primary text-white rounded hover:bg-red-700 transition"
+              className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition"
             >
               Logout
             </button>
@@ -110,7 +110,7 @@ export default function ReportsPage() {
         {/* Back Button */}
         <Link
           href="/dashboard"
-          className="inline-flex items-center text-primary hover:text-red-700 mb-6 font-medium"
+          className="inline-flex items-center text-red-600 hover:text-red-700 mb-6 font-medium"
         >
           ← Back to Dashboard
         </Link>
@@ -138,13 +138,13 @@ export default function ReportsPage() {
         </div>
 
         {/* Client Performance Table */}
-        <div className="bg-white rounded border border-gray-200 overflow-hidden">
+        <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
           <div className="p-6 border-b border-gray-200">
             <h2 className="text-xl font-bold text-foreground">Client Summary</h2>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-black text-white">
+              <thead className="bg-gray-50 text-gray-700">
                 <tr>
                   <th className="px-6 py-3 text-left text-sm font-semibold">Name</th>
                   <th className="px-6 py-3 text-left text-sm font-semibold">Email</th>

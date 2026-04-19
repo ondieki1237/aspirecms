@@ -64,17 +64,17 @@ export default function AdminDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-black text-white sticky top-0 z-50 border-b border-primary">
+      <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Admin Dashboard</h1>
+          <h1 className="text-2xl font-semibold text-gray-900">Admin Dashboard</h1>
           <button
             onClick={() => {
               fetch('/api/auth/logout', { method: 'POST', credentials: 'include' })
               router.push('/auth/login')
             }}
-            className="px-4 py-2 bg-primary text-white rounded hover:bg-red-700 transition"
+            className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition"
           >
             Logout
           </button>
@@ -90,32 +90,32 @@ export default function AdminDashboard() {
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <div className="bg-white p-6 rounded border border-gray-200">
+          <div className="bg-white p-6 rounded-lg border border-gray-200">
             <p className="text-gray-600 text-sm mb-2">Total Counselors</p>
             <p className="text-3xl font-bold text-primary">{stats.totalCounselors}</p>
           </div>
-          <div className="bg-white p-6 rounded border border-gray-200">
+          <div className="bg-white p-6 rounded-lg border border-gray-200">
             <p className="text-gray-600 text-sm mb-2">Total Clients</p>
             <p className="text-3xl font-bold text-secondary">{stats.totalClients}</p>
           </div>
-          <div className="bg-white p-6 rounded border border-gray-200">
+          <div className="bg-white p-6 rounded-lg border border-gray-200">
             <p className="text-gray-600 text-sm mb-2">Total Tasks</p>
             <p className="text-3xl font-bold text-black">{stats.totalTasks}</p>
           </div>
-          <div className="bg-white p-6 rounded border border-gray-200">
+          <div className="bg-white p-6 rounded-lg border border-gray-200">
             <p className="text-gray-600 text-sm mb-2">Completed Tasks</p>
             <p className="text-3xl font-bold text-primary">{stats.completedTasks}</p>
           </div>
         </div>
 
         {/* Counselors Table */}
-        <div className="bg-white rounded border border-gray-200 overflow-hidden">
+        <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
           <div className="p-6 border-b border-gray-200">
             <h2 className="text-xl font-bold text-foreground">Counselor Performance</h2>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-black text-white">
+              <thead className="bg-gray-50 text-gray-700">
                 <tr>
                   <th className="px-6 py-3 text-left text-sm font-semibold">Name</th>
                   <th className="px-6 py-3 text-left text-sm font-semibold">Email</th>
